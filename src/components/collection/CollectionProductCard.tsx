@@ -110,14 +110,14 @@ export function CollectionProductCard({
           </span>
         </div>
 
-        <div className="mt-5 grid grid-cols-2 border border-black">
+        <div className="mt-5 grid grid-cols-2 gap-px border border-black/20 bg-black/20">
           <button
             type="button"
             aria-pressed={wishlisted}
             onClick={onWishlist}
             className={cn(
-              "flex h-12 items-center justify-center gap-2 border-r border-black font-display text-sm font-bold uppercase transition hover:bg-black hover:text-white",
-              wishlisted && "bg-signal text-white",
+              "flex h-12 items-center justify-center gap-2 bg-[#f1e7e4] font-display text-sm font-bold uppercase text-black transition hover:bg-[#ead4d1] hover:text-signal",
+              wishlisted && "bg-[#f4d9d7] text-signal",
             )}
           >
             <Heart

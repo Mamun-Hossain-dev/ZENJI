@@ -14,30 +14,30 @@ const cards = [
   {
     image: products[3].frontImage,
     name: products[3].name,
-    x: "-15vw",
-    y: -18,
-    rotate: -8,
+    stackX: "-4.8vw",
+    x: "-11vw",
+    rotate: -3,
   },
   {
     image: products[1].frontImage,
     name: products[1].name,
-    x: "-5vw",
-    y: 12,
-    rotate: -2,
+    stackX: "-1.6vw",
+    x: "-3.7vw",
+    rotate: -1,
   },
   {
     image: products[0].backImage,
     name: products[0].name,
-    x: "5vw",
-    y: -8,
-    rotate: 4,
+    stackX: "1.6vw",
+    x: "3.7vw",
+    rotate: 1,
   },
   {
     image: products[2].frontImage,
     name: products[2].name,
-    x: "15vw",
-    y: 8,
-    rotate: 8,
+    stackX: "4.8vw",
+    x: "11vw",
+    rotate: 3,
   },
 ];
 
@@ -48,13 +48,19 @@ type EditorialCardProps = {
 };
 
 function EditorialCard({ card, index, progress }: EditorialCardProps) {
-  const start = 0.48 + index * 0.09;
-  const revealed = start + 0.07;
-  const opacity = useTransform(progress, [start, revealed], [0, 0.9]);
-  const x = useTransform(progress, [start, 0.84], ["0vw", card.x]);
-  const y = useTransform(progress, [start, revealed, 0.84], [160, 30, card.y]);
-  const rotate = useTransform(progress, [start, 0.84], [0, card.rotate]);
-  const scale = useTransform(progress, [start, revealed], [0.82, 1]);
+  const start = 0.49 + index * 0.1;
+  const revealed = start + 0.08;
+  const fanStart = 0.88;
+  const fanEnd = 0.94;
+  const opacity = useTransform(progress, [start, start + 0.055], [0, 0.9]);
+  const x = useTransform(
+    progress,
+    [start, revealed, fanStart, fanEnd],
+    ["0vw", card.stackX, card.stackX, card.x],
+  );
+  const y = useTransform(progress, [start, revealed], ["24vh", "0vh"]);
+  const rotate = useTransform(progress, [start, revealed], [0, card.rotate]);
+  const scale = useTransform(progress, [start, revealed], [0.88, 1]);
 
   return (
     <div
@@ -99,7 +105,7 @@ export function DropEditorial() {
     <section
       ref={sectionRef}
       aria-labelledby="drop-editorial-title"
-      className="relative h-[500vh] bg-[#030303] text-white"
+      className="relative h-[620vh] bg-[#030303] text-white md:h-[760vh]"
     >
       <div className="sticky top-[64px] h-[calc(100vh-64px)] overflow-hidden">
         <div className="grain absolute inset-0 opacity-20" />

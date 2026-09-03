@@ -131,14 +131,14 @@ export function ProductDetails({ product }: { product: CollectionProduct }) {
               </div>
             </fieldset>
 
-            <div className="mt-12 grid grid-cols-2 border border-black">
+            <div className="mt-12 grid grid-cols-2 gap-px border border-black/20 bg-black/20">
               <button
                 type="button"
                 aria-pressed={wishlisted}
                 onClick={() => setWishlisted((value) => !value)}
                 className={cn(
-                  "flex min-h-14 items-center justify-center gap-2 border-r border-black font-display text-base font-bold uppercase transition hover:bg-black hover:text-white",
-                  wishlisted && "bg-signal text-white",
+                  "flex min-h-14 items-center justify-center gap-2 bg-[#f1e7e4] font-display text-base font-bold uppercase text-black transition hover:bg-[#ead4d1] hover:text-signal",
+                  wishlisted && "bg-[#f4d9d7] text-signal",
                 )}
               >
                 <Heart
@@ -206,7 +206,7 @@ export function ProductDetails({ product }: { product: CollectionProduct }) {
                       <tr key={row[0]}>
                         {row.map((cell, index) => (
                           <td
-                            key={cell}
+                            key={`${row[0]}-${index}`}
                             className={cn(
                               "border border-black/10 p-3",
                               index === 0 && "font-bold text-signal",
