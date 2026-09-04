@@ -44,7 +44,7 @@ export function StoryContent() {
             We design for the dreamers, fighters, creators and outsiders shaping
             their own future.
           </p>
-          <blockquote className="mt-8 font-display text-4xl font-bold uppercase leading-[1.05] tracking-[-0.03em] md:text-5xl">
+          <blockquote className="mt-8 font-display text-3xl sm:text-4xl font-bold uppercase leading-[1.05] tracking-[-0.03em] md:text-5xl">
             Wear your story. Wear your spirit. Wear ZENJI.
           </blockquote>
           <p className="mt-8 font-mono text-[8px] uppercase tracking-[0.22em] text-white/30">
@@ -65,7 +65,7 @@ export function StoryContent() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.65 }}
         >
-          <h2 className="font-display text-4xl font-bold uppercase tracking-[-0.03em]">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold uppercase tracking-[-0.03em]">
             About Zenji
           </h2>
           <dl className="mt-8 grid gap-x-10 gap-y-7 sm:grid-cols-2">

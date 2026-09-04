@@ -25,7 +25,7 @@ export function FaqAccordion() {
     <div className="space-y-16">
       {groups.map((group, groupIndex) => (
         <section key={group.title}>
-          <h2 className="mb-5 border-l-2 border-signal pl-4 font-display text-2xl font-bold uppercase tracking-wide">{group.title}</h2>
+          <h2 className="mb-4 sm:mb-5 border-l-2 border-signal pl-3 sm:pl-4 font-display text-xl sm:text-2xl font-bold uppercase tracking-wide">{group.title}</h2>
           <Accordion type="single" collapsible defaultValue={groupIndex === 0 ? `item-${group.title}-0` : undefined}>
             {group.questions.map((item, index) => (
               <AccordionItem key={item.q} value={`item-${group.title}-${index}`}>

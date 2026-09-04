@@ -32,7 +32,7 @@ export default function DropPage() {
               <span className="mr-3 inline-block size-2 rounded-full bg-signal" />{" "}
               Incoming transmission
             </p>
-            <h1 className="font-display text-[clamp(5.5rem,11vw,10.5rem)] font-bold uppercase leading-[0.78] tracking-[-0.055em] text-white">
+            <h1 className="font-display text-[clamp(4rem,11vw,10.5rem)] font-bold uppercase leading-[0.78] tracking-[-0.055em] text-white">
               Awakening
               <span className="mt-3 block text-signal">Is live.</span>
             </h1>

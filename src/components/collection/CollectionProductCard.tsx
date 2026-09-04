@@ -82,7 +82,7 @@ export function CollectionProductCard({
           />
 
           {product.categories.includes("SALE") && (
-            <span className="absolute left-[-42px] top-5 z-10 w-36 -rotate-45 bg-signal py-2 text-center font-mono text-[8px] font-bold uppercase tracking-widest text-white">
+            <span className="absolute left-0 top-0 z-10 w-max -rotate-45 bg-signal px-3 py-1.5 text-center font-mono text-[7px] font-bold uppercase tracking-widest text-white md:left-[-42px] md:w-36 md:top-5 md:py-2 md:text-[8px]">
               Sale 15% off
             </span>
           )}
@@ -92,16 +92,16 @@ export function CollectionProductCard({
         </motion.div>
       </Link>
 
-      <div className="p-4">
-        <h2 className="font-display text-lg font-bold uppercase leading-none">
-          {product.name}
-        </h2>
-        <p className="mt-2 font-mono text-[8px] uppercase tracking-wider text-black/40">
-          {product.color}
-        </p>
-        <div className="mt-3 font-display text-2xl font-bold leading-none">
+        <div className="p-3 sm:p-4">
+          <h2 className="font-display text-base sm:text-lg font-bold uppercase leading-none">
+            {product.name}
+          </h2>
+          <p className="mt-1.5 sm:mt-2 font-mono text-[7px] sm:text-[8px] uppercase tracking-wider text-black/40">
+            {product.color}
+          </p>
+          <div className="mt-2.5 sm:mt-3 font-display text-xl sm:text-2xl font-bold leading-none">
           {product.compareAt && (
-            <span className="mr-2 text-xs text-black/35 line-through">
+            <span className="mr-2 text-[10px] sm:text-xs text-black/35 line-through">
               {product.compareAt}
             </span>
           )}
@@ -110,34 +110,36 @@ export function CollectionProductCard({
           </span>
         </div>
 
-        <div className="mt-5 grid grid-cols-2 gap-px border border-black/20 bg-black/20">
+        <div className="mt-3 sm:mt-5 grid grid-cols-2 gap-px border border-black/20 bg-black/20">
           <button
             type="button"
             aria-pressed={wishlisted}
             onClick={onWishlist}
             className={cn(
-              "flex h-12 items-center justify-center gap-2 bg-[#f1e7e4] font-display text-sm font-bold uppercase text-black transition hover:bg-[#ead4d1] hover:text-signal",
+              "flex h-11 sm:h-12 items-center justify-center gap-1.5 bg-[#f1e7e4] font-display text-xs sm:text-sm font-bold uppercase text-black transition hover:bg-[#ead4d1] hover:text-signal",
               wishlisted && "bg-[#f4d9d7] text-signal",
             )}
           >
             <Heart
-              className="size-4"
+              className="size-3.5 sm:size-4"
               fill={wishlisted ? "currentColor" : "none"}
             />{" "}
-            {wishlisted ? "Saved" : "Wishlist"}
+            <span className="hidden sm:inline">{wishlisted ? "Saved" : "Wishlist"}</span>
+            <span className="sm:hidden">{wishlisted ? "Save" : "Wish"}</span>
           </button>
           <button
             type="button"
             aria-pressed={inCart}
             onClick={onCart}
-            className="flex h-12 items-center justify-center gap-2 bg-black font-display text-sm font-bold uppercase text-white transition hover:bg-signal"
+            className="flex h-11 sm:h-12 items-center justify-center gap-1.5 bg-black font-display text-xs sm:text-sm font-bold uppercase text-white transition hover:bg-signal"
           >
             {inCart ? (
-              <Check className="size-4" />
+              <Check className="size-3.5 sm:size-4" />
             ) : (
-              <ShoppingBag className="size-4" />
+              <ShoppingBag className="size-3.5 sm:size-4" />
             )}{" "}
-            {inCart ? "Added" : "Add to cart"}
+            <span className="hidden sm:inline">{inCart ? "Added" : "Add to cart"}</span>
+            <span className="sm:hidden">{inCart ? "In cart" : "Add"}</span>
           </button>
         </div>
       </div>

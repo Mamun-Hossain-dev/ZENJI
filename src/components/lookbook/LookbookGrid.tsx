@@ -81,7 +81,7 @@ export function LookbookGrid() {
       <div className="mx-auto max-w-[1400px] px-5 py-5 md:px-10 md:py-10">
         <motion.div
           layout
-          className="grid auto-rows-[80px] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"
+          className="grid auto-rows-[60px] sm:auto-rows-[80px] grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3"
         >
           <AnimatePresence mode="popLayout">
             {items.map(({ id, product, className, position }, index) => (
@@ -98,10 +98,10 @@ export function LookbookGrid() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 exit="exit"
-                className={cn(
-                  "lookbook-card-shadow group relative row-span-6 min-h-[480px] overflow-hidden bg-white",
-                  className,
-                )}
+          className={cn(
+            "lookbook-card-shadow group relative row-span-6 min-h-[360px] sm:min-h-[420px] md:min-h-[480px] overflow-hidden bg-white",
+            className,
+          )}
               >
                 <Image
                   src={
@@ -115,14 +115,14 @@ export function LookbookGrid() {
                     "object-cover transition duration-700 group-hover:scale-[1.03]",
                     position,
                   )}
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/15 opacity-0 transition group-hover:opacity-80" />
-                <span className="absolute left-5 top-5 z-10 font-mono text-[8px] font-bold uppercase tracking-widest text-white drop-shadow-md">
+                <span className="absolute left-4 sm:left-5 top-4 sm:top-5 z-10 font-mono text-[7px] sm:text-[8px] font-bold uppercase tracking-widest text-white drop-shadow-md">
                   {product.tag === "SALE" ? "Sale" : "New_Arrival"}
                 </span>
-                <div className="absolute inset-x-0 bottom-0 translate-y-4 p-5 text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                  <h2 className="font-display text-2xl font-bold uppercase">
+                <div className="absolute inset-x-0 bottom-0 translate-y-4 p-4 sm:p-5 text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  <h2 className="font-display text-xl sm:text-2xl font-bold uppercase">
                     {product.name}
                   </h2>
                   <p className="mt-1 font-mono text-[8px] uppercase tracking-widest text-white/55">

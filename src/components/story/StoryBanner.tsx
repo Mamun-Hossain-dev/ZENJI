@@ -13,7 +13,7 @@ export function StoryBanner() {
           About // Zenji
         </p>
         <div className="my-5 h-px w-10 bg-signal" />
-        <h1 className="font-display text-[58px] font-bold uppercase leading-[0.88] tracking-[-0.05em] sm:text-7xl md:text-[92px]">
+        <h1 className="font-display text-[40px] font-bold uppercase leading-[0.88] tracking-[-0.05em] sm:text-7xl md:text-[92px]">
           Anime streetwear Australia.
           <br />
           Born from the warrior spirit.

@@ -9,8 +9,8 @@ export default function FaqPage() {
       <div className="grain absolute inset-0 opacity-20" />
       <div aria-hidden className="pointer-events-none absolute right-[-3vw] top-[14rem] font-display text-[28vw] font-bold leading-none text-white/[0.018]">FAQ</div>
       <div className="relative mx-auto max-w-[900px]">
-        <header className="mb-16 border-b border-signal pb-8 md:mb-20">
-          <h1 className="font-display text-8xl font-bold uppercase leading-none tracking-[-0.06em] md:text-[132px]">FAQ</h1>
+        <header className="mb-12 sm:mb-16 border-b border-signal pb-6 sm:pb-8 md:mb-20">
+          <h1 className="font-display text-6xl sm:text-7xl md:text-8xl font-bold uppercase leading-none tracking-[-0.06em] lg:text-[132px]">FAQ</h1>
           <p className="mt-3 font-mono text-[9px] font-bold uppercase tracking-[0.32em] text-signal">Everything you need to know</p>
         </header>
         <FaqAccordion />

@@ -106,7 +106,7 @@ export function SaleShowcase() {
             <p className="mb-3 font-mono text-[9px] font-bold uppercase tracking-[0.22em] text-signal">
               Collection // The_Origin_Drop
             </p>
-            <h2 className="font-display text-7xl font-bold uppercase leading-none tracking-[-0.055em] sm:text-8xl md:text-[112px]">
+            <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-[-0.055em] sm:text-7xl md:text-8xl lg:text-[112px]">
               Sale
             </h2>
           </div>

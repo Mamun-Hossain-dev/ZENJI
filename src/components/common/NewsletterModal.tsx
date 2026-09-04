@@ -47,7 +47,7 @@ export function NewsletterModal() {
           <div className="relative mx-auto mb-7 h-6 w-[108px]">
             <Image src="/images/Outlook-ZENJI.png" alt="ZENJI" fill sizes="108px" className="object-contain brightness-0 invert" />
           </div>
-          <DialogTitle className="font-display text-3xl font-bold uppercase leading-tight md:text-4xl">
+          <DialogTitle className="font-display text-2xl font-bold uppercase leading-tight sm:text-3xl md:text-4xl">
             Free shipping on first order
           </DialogTitle>
           <DialogDescription className="mt-2 font-mono text-[10px] uppercase tracking-[0.23em] text-white/55">

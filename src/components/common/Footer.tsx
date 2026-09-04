@@ -49,8 +49,8 @@ export function Footer() {
       >
         ZENJI
       </div>
-      <div className="relative mx-auto grid max-w-[1640px] grid-cols-2 gap-14 pb-20 md:grid-cols-4 lg:grid-cols-[1.7fr_repeat(4,1fr)] lg:gap-10 lg:pb-28">
-        <div className="col-span-2 md:col-span-4 lg:col-span-1 lg:pr-12">
+      <div className="relative mx-auto grid max-w-[1640px] grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-[1.7fr_repeat(4,1fr)] lg:gap-10 lg:pb-28">
+        <div className="sm:col-span-2 md:col-span-4 lg:col-span-1 lg:pr-12">
           <Link
             href="/"
             aria-label="ZENJI home"
@@ -75,21 +75,21 @@ export function Footer() {
             <a
               href="#"
               aria-label="ZENJI on TikTok"
-              className="flex h-11 items-center gap-2 bg-white px-4 font-mono text-[9px] text-black transition hover:bg-white/80"
+              className="flex h-11 items-center gap-2 bg-white px-3 sm:px-4 font-mono text-[9px] sm:text-[10px] text-black transition hover:bg-white/80"
             >
               <Music2 className="size-3.5" /> TikTok
             </a>
             <a
               href="#"
               aria-label="ZENJI on Instagram"
-              className="flex h-11 items-center gap-2 bg-gradient-to-r from-[#f59d32] via-[#ef4c53] to-[#b92da3] px-4 font-mono text-[9px] text-white transition hover:brightness-110"
+              className="flex h-11 items-center gap-2 bg-gradient-to-r from-[#f59d32] via-[#ef4c53] to-[#b92da3] px-3 sm:px-4 font-mono text-[9px] sm:text-[10px] text-white transition hover:brightness-110"
             >
               <Instagram className="size-3.5" /> Instagram
             </a>
             <a
               href="#"
               aria-label="ZENJI on Facebook"
-              className="flex h-11 items-center gap-2 bg-[#2374e1] px-4 font-mono text-[9px] text-white transition hover:bg-[#3485f2]"
+              className="flex h-11 items-center gap-2 bg-[#2374e1] px-3 sm:px-4 font-mono text-[9px] sm:text-[10px] text-white transition hover:bg-[#3485f2]"
             >
               <Facebook className="size-3.5" /> Facebook
             </a>

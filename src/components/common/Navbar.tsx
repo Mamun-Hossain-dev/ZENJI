@@ -84,7 +84,7 @@ export function Navbar() {
               aria-expanded={moreOpen}
               onClick={() => setMoreOpen((value) => !value)}
               className={cn(
-                "flex items-center gap-1 font-mono text-[10px] font-bold uppercase tracking-[0.19em] text-white/85 transition hover:text-white hover:[text-shadow:0_0_12px_rgba(255,255,255,.8)]",
+                "flex items-center gap-1 font-mono text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.19em] text-white/85 transition hover:text-white hover:[text-shadow:0_0_12px_rgba(255,255,255,.8)]",
                 (moreOpen || moreActive) && "text-signal [text-shadow:none]",
               )}
             >
@@ -123,7 +123,7 @@ export function Navbar() {
           {[Search, Heart, ShoppingBag, UserRound].map((Icon, index) => (
             <button
               key={index}
-              className="hidden size-10 place-items-center transition hover:text-signal sm:grid"
+              className="grid size-10 place-items-center transition hover:text-signal sm:grid"
               aria-label={["Search", "Wishlist", "Cart", "Account"][index]}
             >
               <Icon size={20} strokeWidth={1.6} />
@@ -155,10 +155,10 @@ export function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className={cn(
-                    "border-b border-white/10 py-4 font-display text-2xl uppercase text-white transition hover:text-white",
-                    active && "text-signal",
-                  )}
+              className={cn(
+                "border-b border-white/10 py-4 font-display text-xl uppercase text-white transition hover:text-white sm:text-2xl",
+                active && "text-signal",
+              )}
                 >
                   {link.label}
                 </Link>
@@ -168,7 +168,7 @@ export function Navbar() {
               type="button"
               onClick={() => setMoreOpen((value) => !value)}
               className={cn(
-                "flex items-center justify-between border-b border-white/10 py-4 text-left font-display text-2xl uppercase text-white transition hover:text-white",
+                "flex items-center justify-between border-b border-white/10 py-4 text-left font-display text-xl uppercase text-white transition hover:text-white sm:text-2xl",
                 moreActive && "text-signal",
               )}
             >

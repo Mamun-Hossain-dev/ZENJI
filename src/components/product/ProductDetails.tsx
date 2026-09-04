@@ -53,7 +53,7 @@ export function ProductDetails({ product }: { product: CollectionProduct }) {
                 sizes="(max-width: 1024px) 100vw, 58vw"
               />
             </div>
-            <div className="mt-3 flex gap-3 overflow-x-auto pb-2">
+            <div className="mt-3 flex gap-2 sm:gap-3 overflow-x-auto pb-2">
               {gallery.map((image, index) => (
                 <button
                   key={`${image}-${index}`}
@@ -61,8 +61,8 @@ export function ProductDetails({ product }: { product: CollectionProduct }) {
                   onClick={() => setSelectedImage(index)}
                   aria-label={`Show ${product.name} view ${index + 1}`}
                   aria-pressed={selectedImage === index}
-                  className={cn(
-                    "relative aspect-square w-20 shrink-0 overflow-hidden border bg-[#dedbd7] transition",
+                   className={cn(
+                     "relative aspect-square w-16 sm:w-20 shrink-0 overflow-hidden border bg-[#dedbd7] transition",
                     selectedImage === index
                       ? "border-black"
                       : "border-black/15 hover:border-black/50",
@@ -102,18 +102,18 @@ export function ProductDetails({ product }: { product: CollectionProduct }) {
               <legend className="font-mono text-[8px] font-bold uppercase tracking-[0.18em]">
                 Select size
               </legend>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {sizes.map((size) => {
-                  const disabled = size === "XS" || size === "XXL";
-                  return (
-                    <button
-                      key={size}
-                      type="button"
-                      disabled={disabled}
-                      aria-pressed={selectedSize === size}
-                      onClick={() => setSelectedSize(size)}
-                      className={cn(
-                        "grid size-14 place-items-center border font-mono text-[9px] transition",
+              <div className="mt-4 flex flex-wrap gap-1.5 sm:gap-2">
+                 {sizes.map((size) => {
+                   const disabled = size === "XS" || size === "XXL";
+                   return (
+                     <button
+                       key={size}
+                       type="button"
+                       disabled={disabled}
+                       aria-pressed={selectedSize === size}
+                       onClick={() => setSelectedSize(size)}
+                       className={cn(
+                         "grid size-11 sm:size-14 place-items-center border font-mono text-[8px] sm:text-[9px] transition",
                         disabled &&
                           "cursor-not-allowed border-black/15 text-black/25 line-through",
                         !disabled &&
@@ -131,42 +131,44 @@ export function ProductDetails({ product }: { product: CollectionProduct }) {
               </div>
             </fieldset>
 
-            <div className="mt-12 grid grid-cols-2 gap-px border border-black/20 bg-black/20">
-              <button
-                type="button"
-                aria-pressed={wishlisted}
-                onClick={() => setWishlisted((value) => !value)}
-                className={cn(
-                  "flex min-h-14 items-center justify-center gap-2 bg-[#f1e7e4] font-display text-base font-bold uppercase text-black transition hover:bg-[#ead4d1] hover:text-signal",
-                  wishlisted && "bg-[#f4d9d7] text-signal",
-                )}
-              >
-                <Heart
-                  className="size-4"
-                  fill={wishlisted ? "currentColor" : "none"}
-                />{" "}
-                {wishlisted ? "Saved" : "Wishlist"}
-              </button>
-              <button
-                type="button"
-                aria-pressed={inCart}
-                onClick={() => setInCart((value) => !value)}
-                className="flex min-h-14 items-center justify-center gap-2 bg-black font-display text-base font-bold uppercase text-white transition hover:bg-signal"
-              >
-                {inCart ? (
-                  <Check className="size-4" />
-                ) : (
-                  <ShoppingBag className="size-4" />
-                )}{" "}
-                {inCart ? "Added" : "Add to cart"}
-              </button>
-            </div>
+             <div className="mt-10 sm:mt-12 grid grid-cols-2 gap-px border border-black/20 bg-black/20">
+               <button
+                 type="button"
+                 aria-pressed={wishlisted}
+                 onClick={() => setWishlisted((value) => !value)}
+                 className={cn(
+                   "flex min-h-12 sm:min-h-14 items-center justify-center gap-1.5 bg-[#f1e7e4] font-display text-sm sm:text-base font-bold uppercase text-black transition hover:bg-[#ead4d1] hover:text-signal",
+                   wishlisted && "bg-[#f4d9d7] text-signal",
+                 )}
+               >
+                 <Heart
+                   className="size-3.5 sm:size-4"
+                   fill={wishlisted ? "currentColor" : "none"}
+                 />{" "}
+                 <span className="hidden sm:inline">{wishlisted ? "Saved" : "Wishlist"}</span>
+                 <span className="sm:hidden">{wishlisted ? "Save" : "Wish"}</span>
+               </button>
+               <button
+                 type="button"
+                 aria-pressed={inCart}
+                 onClick={() => setInCart((value) => !value)}
+                 className="flex min-h-12 sm:min-h-14 items-center justify-center gap-1.5 bg-black font-display text-sm sm:text-base font-bold uppercase text-white transition hover:bg-signal"
+               >
+                 {inCart ? (
+                   <Check className="size-3.5 sm:size-4" />
+                 ) : (
+                   <ShoppingBag className="size-3.5 sm:size-4" />
+                 )}{" "}
+                 <span className="hidden sm:inline">{inCart ? "Added" : "Add to cart"}</span>
+                 <span className="sm:hidden">{inCart ? "In cart" : "Add"}</span>
+               </button>
+             </div>
 
-            <div className="mt-8 border-b border-black/10 pb-8">
-              <h2 className="font-display text-lg font-bold uppercase">
+            <div className="mt-7 sm:mt-8 border-b border-black/10 pb-6 sm:pb-8">
+              <h2 className="font-display text-base sm:text-lg font-bold uppercase">
                 Product details
               </h2>
-              <p className="mt-4 font-mono text-[9px] leading-6 text-black/50">
+              <p className="mt-3 sm:mt-4 font-mono text-[9px] leading-6 text-black/50">
                 Discipline forged in silence. Every stitch a vow.
                 <br />
                 240gsm heavyweight cotton.
@@ -177,16 +179,16 @@ export function ProductDetails({ product }: { product: CollectionProduct }) {
               </p>
             </div>
 
-            <details open className="group border-b border-black/10 py-8">
-              <summary className="flex cursor-pointer list-none items-center justify-between font-display text-lg font-bold uppercase">
+            <details open className="group border-b border-black/10 py-6 sm:py-8">
+              <summary className="flex cursor-pointer list-none items-center justify-between font-display text-base sm:text-lg font-bold uppercase">
                 Size guide
-                <span className="grid size-11 place-items-center border border-signal text-signal">
+                <span className="grid size-10 sm:size-11 place-items-center border border-signal text-signal">
                   <span className="group-open:hidden">+</span>
                   <span className="hidden group-open:inline">−</span>
                 </span>
               </summary>
-              <div className="mt-8 overflow-x-auto">
-                <table className="w-full min-w-[480px] border-collapse font-mono text-[8px] uppercase text-black/55">
+              <div className="mt-6 sm:mt-8 overflow-x-auto">
+                <table className="w-full min-w-[360px] sm:min-w-[480px] border-collapse font-mono text-[7px] sm:text-[8px] uppercase text-black/55">
                   <thead>
                     <tr>
                       {["Size", "Chest (flat)", "Length", "Shoulder"].map(
@@ -219,17 +221,17 @@ export function ProductDetails({ product }: { product: CollectionProduct }) {
                     ))}
                   </tbody>
                 </table>
-                <p className="mt-3 border-l-2 border-signal bg-white px-4 py-3 font-mono text-[8px] uppercase tracking-wider text-black/45">
+                <p className="mt-2 sm:mt-3 border-l-2 border-signal bg-white px-3 sm:px-4 py-2 sm:py-3 font-mono text-[7px] sm:text-[8px] uppercase tracking-wider text-black/45">
                   Oversized fit — size down if between sizes. Garment
                   measurements in cm.
                 </p>
               </div>
             </details>
 
-            <details open className="group border-b border-black/10 py-8">
-              <summary className="flex cursor-pointer list-none items-center justify-between font-display text-lg font-bold uppercase">
+            <details open className="group border-b border-black/10 py-6 sm:py-8">
+              <summary className="flex cursor-pointer list-none items-center justify-between font-display text-base sm:text-lg font-bold uppercase">
                 Shipping &amp; returns
-                <span className="grid size-11 place-items-center border border-signal text-signal">
+                <span className="grid size-10 sm:size-11 place-items-center border border-signal text-signal">
                   <span className="group-open:hidden">+</span>
                   <span className="hidden group-open:inline">−</span>
                 </span>

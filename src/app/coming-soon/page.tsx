@@ -16,9 +16,9 @@ export default function ComingSoonPage() {
       />
 
       <div className="relative">
-        <h1 className="font-display text-[clamp(5rem,10vw,10rem)] font-bold uppercase leading-none tracking-[-0.055em]">
-          Coming Soon
-        </h1>
+         <h1 className="font-display text-[clamp(4rem,10vw,10rem)] font-bold uppercase leading-none tracking-[-0.055em]">
+           Coming Soon
+         </h1>
         <p className="mt-5 font-mono text-[9px] font-bold uppercase tracking-[0.28em] text-signal">
           This sector is restricted
         </p>

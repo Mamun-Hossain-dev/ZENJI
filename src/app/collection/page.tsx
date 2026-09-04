@@ -17,7 +17,7 @@ export default function CollectionPage() {
 
             <div className="mt-6 flex items-center justify-between gap-10">
               <div>
-                <h1 className="max-w-[1080px] font-display text-[58px] font-bold uppercase leading-[0.88] tracking-[-0.055em] sm:text-7xl md:text-[92px] lg:text-[108px]">
+                <h1 className="max-w-[1080px] font-display text-[40px] font-bold uppercase leading-[0.88] tracking-[-0.055em] sm:text-7xl md:text-[92px] lg:text-[108px]">
                   Anime graphic tees —<br />
                   The full collection
                 </h1>

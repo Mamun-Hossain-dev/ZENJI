@@ -32,14 +32,14 @@ export function ProductCard({
           fill
           priority={index < 2}
           className="object-cover opacity-100 transition duration-700 ease-out group-hover:scale-[1.025] group-hover:opacity-0"
-          sizes="(max-width: 768px) 85vw, 25vw"
+          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 25vw"
         />
         <Image
           src={product.backImage}
           alt={`${product.name} back`}
           fill
           className="object-cover opacity-0 transition duration-700 ease-out group-hover:scale-[1.025] group-hover:opacity-100"
-          sizes="(max-width: 768px) 85vw, 25vw"
+          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 25vw"
         />
         {product.tag && (
           <span className="absolute left-0 top-0 bg-signal px-4 py-2 font-mono text-[9px] font-bold uppercase tracking-[0.16em] text-white">
@@ -53,18 +53,18 @@ export function ProductCard({
           <ArrowUpRight className="size-4 text-signal" />
         </div>
       </Link>
-      <div className="flex items-start justify-between gap-3 border-x border-b border-black/15 bg-white p-4">
+      <div className="flex items-start justify-between gap-3 border-x border-b border-black/15 bg-white p-3 sm:p-4">
         <div>
-          <h3 className="font-display text-lg font-bold uppercase leading-none">
+          <h3 className="font-display text-base sm:text-lg font-bold uppercase leading-none">
             {product.name}
           </h3>
-          <p className="mt-2 font-mono text-[8px] uppercase tracking-wider text-black/40">
+          <p className="mt-1 sm:mt-2 font-mono text-[7px] sm:text-[8px] uppercase tracking-wider text-black/40">
             {product.color}
           </p>
         </div>
-        <div className="shrink-0 text-right font-display text-xl font-bold">
+        <div className="shrink-0 text-right font-display text-lg sm:text-xl font-bold">
           {product.compareAt && (
-            <div className="text-[11px] text-black/35 line-through">
+            <div className="text-[10px] sm:text-[11px] text-black/35 line-through">
               {product.compareAt}
             </div>
           )}

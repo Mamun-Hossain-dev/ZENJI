@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function Ethos() {
   return (
-    <section id="ethos" className="relative min-h-[760px] overflow-hidden bg-black text-white md:min-h-[900px]">
+    <section id="ethos" className="relative min-h-[600px] overflow-hidden bg-black text-white md:min-h-[760px] lg:min-h-[900px]">
       <Image src="/images/zenji-campaign.png" alt="ZENJI original campaign editorial" fill className="object-cover object-[68%_center] opacity-55 md:object-center" sizes="100vw" />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
@@ -16,12 +16,12 @@ export function Ethos() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.35 }}
         transition={{ duration: 0.7 }}
-        className="relative mx-auto flex min-h-[760px] max-w-[1400px] items-center px-5 py-24 md:min-h-[900px] md:px-10"
+        className="relative mx-auto flex min-h-[600px] max-w-[1400px] items-center px-5 py-20 md:min-h-[760px] md:px-10 lg:min-h-[900px]"
       >
         <div className="max-w-[480px]">
           <p className="font-mono text-[9px] font-bold uppercase tracking-[0.28em] text-signal">Manifesto_001</p>
           <div className="my-7 h-px w-16 bg-signal" />
-          <h2 className="font-display text-7xl font-bold uppercase leading-[0.88] tracking-[-0.05em] sm:text-8xl">
+          <h2 className="font-display text-5xl font-bold uppercase leading-[0.88] tracking-[-0.05em] sm:text-7xl md:text-8xl">
             The <span className="text-signal">Zenji</span> Ethos
           </h2>
           <p className="mt-9 max-w-md font-mono text-[11px] leading-7 text-white/65">

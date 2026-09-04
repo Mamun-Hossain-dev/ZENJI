@@ -98,7 +98,7 @@ export function DropCountdown({ target }: { target: string }) {
                 key={key}
                 className="relative border border-signal bg-white/40 px-4 py-7 shadow-[0_0_28px_rgba(209,10,10,.13)]"
               >
-                <strong className="block font-display text-6xl font-bold leading-none tabular-nums">
+                <strong className="block font-display text-5xl sm:text-6xl font-bold leading-none tabular-nums">
                   {String(timeLeft[key]).padStart(index === 0 ? 1 : 2, "0")}
                 </strong>
                 <span className="mt-4 block font-mono text-[9px] uppercase tracking-widest text-black/35">
@@ -118,7 +118,7 @@ export function DropCountdown({ target }: { target: string }) {
 
           <motion.h2
             variants={revealItem}
-            className="mt-14 font-display text-3xl font-bold uppercase tracking-[0.04em]"
+            className="mt-10 sm:mt-14 font-display text-2xl sm:text-3xl font-bold uppercase tracking-[0.04em]"
           >
             The drop is coming
           </motion.h2>

@@ -107,7 +107,7 @@ export function DropEditorial() {
       aria-labelledby="drop-editorial-title"
       className="relative h-[620vh] bg-[#030303] text-white md:h-[760vh]"
     >
-      <div className="sticky top-[64px] h-[calc(100vh-64px)] overflow-hidden">
+      <div className="sticky top-[60px] sm:top-[64px] h-[calc(100vh-60px)] sm:h-[calc(100vh-64px)] overflow-hidden">
         <div className="grain absolute inset-0 opacity-20" />
         <div className="absolute inset-x-0 top-0 z-20 mx-auto flex max-w-[1640px] justify-between px-5 pt-10 font-mono text-[8px] uppercase tracking-[0.28em] text-white/28 md:px-10">
           <p>

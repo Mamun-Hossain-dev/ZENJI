@@ -37,7 +37,7 @@ export function LookbookHeader() {
           variants={textVariants}
           className="mt-5 flex items-end justify-between gap-8"
         >
-          <h1 className="max-w-[950px] font-display text-[68px] font-bold uppercase leading-[0.86] tracking-[-0.06em] sm:text-8xl md:text-[132px]">
+          <h1 className="max-w-[950px] font-display text-[48px] font-bold uppercase leading-[0.86] tracking-[-0.06em] sm:text-8xl md:text-[132px]">
             Anime Streetwear —<br />
             Look Book
           </h1>

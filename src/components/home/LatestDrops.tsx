@@ -10,7 +10,7 @@ export function LatestDrops() {
         <div className="mb-12 flex items-end justify-between gap-6 md:mb-16">
           <div>
             <p className="mb-3 font-mono text-[9px] font-bold uppercase tracking-[0.22em] text-signal">Collection // The_Origin_Drop</p>
-            <h2 className="font-display text-6xl font-bold uppercase leading-none tracking-[-0.05em] sm:text-7xl md:text-8xl">Latest_Drops</h2>
+            <h2 className="font-display text-4xl font-bold uppercase leading-none tracking-[-0.05em] sm:text-6xl md:text-7xl lg:text-8xl">Latest_Drops</h2>
           </div>
           <Link href="/lookbook" className="group hidden items-center gap-8 border border-black px-5 py-4 font-mono text-[9px] font-bold uppercase tracking-widest transition hover:bg-black hover:text-white sm:flex">
             View all <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />

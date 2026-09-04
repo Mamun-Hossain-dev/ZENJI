@@ -7,7 +7,7 @@ export function Logo({ className }: { className?: string }) {
     <Link
       href="/"
       aria-label="ZENJI home"
-      className={cn("relative block h-7 w-[104px] shrink-0", className)}
+      className={cn("relative block h-6 w-20 shrink-0 sm:h-7 sm:w-[104px]", className)}
     >
       <Image
         src="/images/Outlook-ZENJI.png"

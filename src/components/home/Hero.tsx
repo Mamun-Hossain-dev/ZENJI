@@ -25,7 +25,7 @@ export function Hero() {
           <p className="mb-4 flex items-center gap-3 font-mono text-[10px] font-bold uppercase tracking-[0.28em] text-signal">
             <span className="size-2 rounded-full bg-signal" /> The_Zenji_Ethos // 001
           </p>
-          <h1 className="max-w-[660px] font-display text-[76px] font-bold uppercase leading-[0.84] tracking-[-0.055em] text-white sm:text-[100px] md:text-[132px]">
+          <h1 className="max-w-[660px] font-display text-[48px] font-bold uppercase leading-[0.84] tracking-[-0.055em] text-white sm:text-[76px] md:text-[132px]">
             Wear your <span className="text-signal">story</span>
           </h1>
           <div className="mt-8 flex items-end gap-8">
